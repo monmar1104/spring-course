@@ -23,11 +23,16 @@ Country:
 
 <br><br>
 Favorite language:
+<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguages}"/>
 
-Java <form:radiobutton path="favoriteLanguage" value="Java"/>
+
+<%-- Java <form:radiobutton path="favoriteLanguage" value="Java"/>
 PHP <form:radiobutton path="favoriteLanguage" value="PHP"/>
 C++ <form:radiobutton path="favoriteLanguage" value="C++"/>
 Phyton <form:radiobutton path="favoriteLanguage" value="Phyton"/>
+ --%>
+<br><br>
+<form:checkboxes items="${student.operatingSystems}" path="operatingSystems"/>
 
 <br><br>
 <input type="submit" value="Submit"/>

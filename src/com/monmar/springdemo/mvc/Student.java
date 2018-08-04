@@ -1,6 +1,8 @@
 package com.monmar.springdemo.mvc;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 public class Student {
 	
@@ -12,6 +14,10 @@ public class Student {
 	
 	private String favoriteLanguage;
 	
+	private List<String> favoriteLanguages;
+	
+	private List<String> operatingSystems;
+	
 	
 	public Student() {
 		countryList = new LinkedHashMap<>();
@@ -19,6 +25,18 @@ public class Student {
 		countryList.put("PL", "Poland");
 		countryList.put("FR", "France");
 		countryList.put("DE", "Germany");
+		
+		favoriteLanguages = new ArrayList<>();
+		favoriteLanguages.add("Java");
+		favoriteLanguages.add("C++");
+		favoriteLanguages.add("PHP");
+		favoriteLanguages.add("Ruby");
+		
+		operatingSystems = new ArrayList<>();
+		operatingSystems.add("Linux");
+		operatingSystems.add("Mac OS");
+		operatingSystems.add("MS Windows");
+		
 		
 	}
 	
@@ -50,6 +68,18 @@ public class Student {
 
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	public List<String> getFavoriteLanguages() {
+		return favoriteLanguages;
+	}
+
+	public List<String> getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(List<String> operatingSystems) {
+		this.operatingSystems = operatingSystems;
 	}
 
 	
