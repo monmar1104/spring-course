@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import com.monmar.springdemo.mvc.validation.CourseCode;
+
 public class Student {
 	
 	private String firstName;
@@ -17,6 +19,9 @@ public class Student {
 	private List<String> favoriteLanguages;
 	
 	private List<String> operatingSystems;
+	
+	@CourseCode(value="LUV", message="must start with LUV")
+	private String courseCode;
 	
 	
 	public Student() {
